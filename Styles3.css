@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+}
+canvas {
+    display: block;
+}
+.birthday-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #90e0ef;
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    font-family: 'Kumbh Sans', sans-serif; /* Ensure correct font family */
+}
+
+.birthday-text:hover {
+    color: #023e8a;
+    transition: 0.3s ease-in;
+}
