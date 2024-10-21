@@ -64,15 +64,16 @@ const butterflyStars = [
 const backgroundStars = Array.from({ length: 100 }, () => {
     let x, y;
 
-    // Ensure the stars are placed away from the butterfly constellation and the top center area
+    // Ensure the stars are placed away from the butterfly constellation area and the top center area
     do {
         x = Math.random() * canvas.width;
         y = Math.random() * canvas.height;
     } while (
         // Adjust distance to avoid the butterfly constellation area
-        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) + 50) < 150) || // Adjusting for the butterfly position
-        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) - 50) < 150) ||
-        (y < canvas.height / 4) // Exclude the top quarter of the canvas
+        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) + 50) < 150) || // Above butterfly
+        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) - 50) < 150) || // Below butterfly
+        (y < canvas.height / 4) || // Exclude the top quarter of the canvas
+        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2)) < 150) // Avoid entire butterfly area
     );
 
     return {
@@ -82,6 +83,7 @@ const backgroundStars = Array.from({ length: 100 }, () => {
         opacity: Math.random() * 0.4 + 0.1, // Random opacity between 0.1 and 0.5
     };
 });
+
 
 function drawDiamondWithShine(x, y, size, opacity) {
     const glowSize = size * 1.5; // Reduced glow size

@@ -26,3 +26,42 @@ canvas {
     color: #023e8a;
     transition: 0.3s ease-in;
 }
+
+.navbar {
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick it to the top */
+    width: 100%; /* Full width of the screen */
+    z-index: 999; /* Make sure it's on top of other elements */
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    color: #023e8a; /* Text color */
+    background: #90e0ef;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #023e8a; /* Background color when hovered *
+    transition: all 0.3s ease;
+}
+
+body {
+    padding-top: 80px; /* Prevent content from hiding under the navbar */
+}
