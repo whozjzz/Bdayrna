@@ -16,48 +16,47 @@ window.addEventListener("resize", resizeCanvas, false);
 
 // Butterfly constellation star coordinates (relative to center)
 const butterflyStars = [
-    // Body
-    { x: 0, y: -230, size: 4, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Center body
-    { x: 0, y: -260, size: 5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Upper body
-    { x: 0, y: -190, size: 4, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Lower body
+// Body
+{ x: 0, y: 0, size: 4, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Center body
+{ x: 0, y: -30, size: 5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Upper body
+{ x: 0, y: 40, size: 4, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Lower body
 
-    // Left wing (top)
-    { x: -60, y: -280, size: 3, opacity: 1, color: "rgba(255, 255, 255, 1)" },
-    { x: -100, y: -290, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -120, y: -270, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -130, y: -250, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -110, y: -230, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -80, y: -210, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+// Left wing (top)
+{ x: -60, y: -50, size: 3, opacity: 1, color: "rgba(255, 255, 255, 1)" },
+{ x: -100, y: -60, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -120, y: -40, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -130, y: -20, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -110, y: 0, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -80, y: 20, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
 
-    // Right wing (top)
-    { x: 60, y: -280, size: 3, opacity: 1, color: "rgba(255, 255, 255, 1)" },
-    { x: 100, y: -290, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 120, y: -270, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 130, y: -250, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 110, y: -230, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 80, y: -210, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+// Right wing (top)
+{ x: 60, y: -50, size: 3, opacity: 1, color: "rgba(255, 255, 255, 1)" },
+{ x: 100, y: -60, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 120, y: -40, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 130, y: -20, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 110, y: 0, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 80, y: 20, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
 
-    // Left wing (bottom)
-    { x: -60, y: -160, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -90, y: -130, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -110, y: -100, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -70, y: -70, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: -30, y: -100, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+// Left wing (bottom)
+{ x: -60, y: 90, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -90, y: 120, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -110, y: 150, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -70, y: 180, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: -30, y: 150, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
 
-    // Right wing (bottom)
-    { x: 60, y: -160, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 90, y: -130, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 110, y: -100, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 70, y: -70, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
-    { x: 30, y: -100, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+// Right wing (bottom)
+{ x: 60, y: 90, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 90, y: 120, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 110, y: 150, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 70, y: 180, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
+{ x: 30, y: 150, size: 3, opacity: 0.9, color: "rgba(255, 255, 255, 1)" },
 
-    // Antennas
-    { x: -10, y: -280, size: 2.5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Left antenna base
-    { x: -20, y: -300, size: 2, opacity: 0.9, color: "rgba(255, 255, 255, 1)" }, // Left antenna tip
-    { x: 10, y: -280, size: 2.5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Right antenna base
-    { x: 20, y: -300, size: 2, opacity: 0.9, color: "rgba(255, 255, 255, 1)" }, // Right antenna tip
-
-];
+// Antennas
+{ x: -10, y: -50, size: 2.5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Left antenna base
+{ x: -20, y: -70, size: 2, opacity: 0.9, color: "rgba(255, 255, 255, 1)" }, // Left antenna tip
+{ x: 10, y: -50, size: 2.5, opacity: 1, color: "rgba(255, 255, 255, 1)" }, // Right antenna base
+{ x: 20, y: -70, size: 2, opacity: 0.9, color: "rgba(255, 255, 255, 1)" }, // Right antenna tip
+]
 
 // Function to generate background stars
 // Function to generate background stars
