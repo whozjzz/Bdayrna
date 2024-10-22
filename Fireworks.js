@@ -69,17 +69,18 @@ const butterflyStars = [
 // Function to generate background stars
 const backgroundStars = Array.from({ length: 100 }, () => {
     let x, y;
-
+    
+    const marginX = canvas.width * 0.2;  // Adjust margin relative to canvas width
+    const marginY = canvas.height * 0.2; // Adjust margin relative to canvas height
+    
     // Ensure the stars are placed away from the butterfly constellation area and the top center area
     do {
         x = Math.random() * canvas.width;
         y = Math.random() * canvas.height;
     } while (
-        // Adjust distance to avoid the butterfly constellation area
-        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) + 50) < 150) || // Above butterfly
-        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2) - 50) < 150) || // Below butterfly
-        (y < canvas.height / 4) || // Exclude the top quarter of the canvas
-        (Math.abs(x - (canvas.width / 2)) < 150 && Math.abs(y - (canvas.height / 2)) < 150) // Avoid entire butterfly area
+        // Adjust distance to avoid the butterfly constellation area dynamically
+        (Math.abs(x - (canvas.width / 2)) < marginX && Math.abs(y - (canvas.height / 2)) < marginY) || // Avoid the butterfly area
+        (y < canvas.height * 0.1) // Exclude the top 10% of the canvas to avoid clustering in corners
     );
 
     return {
@@ -89,6 +90,7 @@ const backgroundStars = Array.from({ length: 100 }, () => {
         opacity: Math.random() * 0.4 + 0.1, // Random opacity between 0.1 and 0.5
     };
 });
+
 
 
 function drawDiamondWithShine(x, y, size, opacity) {
