@@ -44,7 +44,7 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #90e0ef;
-    font-size: 48px;
+    font-size: 1rem;
     font-weight: bold;
     text-decoration: none; /* Remove underline */
     font-family: 'Kumbh Sans', sans-serif; /* Ensure correct font family */
