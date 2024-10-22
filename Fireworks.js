@@ -4,7 +4,8 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let scaleFactor = 1; // Initial scale factor
+let scaleFactorX = 1;
+let scaleFactorY = 1;
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
