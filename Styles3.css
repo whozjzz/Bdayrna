@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,10 +11,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick it to the top */
-    width: 100%; /* Full width of the screen */
-    z-index: 999; /* Make sure it's on top of other elements */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .navbar ul {
@@ -26,7 +26,7 @@
 }
 
 .navbar a {
-    color: #90e0ef; /* Text color */
+    color: #90e0ef;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 4px;
@@ -40,27 +40,36 @@ canvas {
     display: block;
 }
 
+/* Centered birthday text */
 .birthday-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #90e0ef;
-    font-size: 1rem;
+    font-size: 2rem; /* Adjust font size for better visibility */
     font-weight: bold;
-    text-decoration: none; /* Remove underline */
-    font-family: 'Kumbh Sans', sans-serif; /* Ensure correct font family */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-align: center; /* Ensure it's centered horizontally */
+    text-decoration: none;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
+/* Hover effect */
 .birthday-text:hover {
     color: #023e8a;
     transition: 0.3s ease-in;
 }
 
+/* Responsive styles for different screen sizes */
 @media (max-width: 600px) {
-    /* Styles for mobile devices */
-  }
-  @media (min-width: 601px) {
-    /* Styles for tablets and desktops */
-  }
-  
+    .birthday-text {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (min-width: 601px) {
+    .birthday-text {
+        font-size: 2rem; /* Larger font size for bigger screens */
+    }
+}
