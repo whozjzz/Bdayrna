@@ -65,3 +65,10 @@ canvas {
     transition: 0.3s ease-in;
 }
 
+@media (max-width: 600px) {
+    /* Styles for mobile devices */
+  }
+  @media (min-width: 601px) {
+    /* Styles for tablets and desktops */
+  }
+
