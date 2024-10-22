@@ -6,8 +6,8 @@
 }
 
 .navbar {
-    background-color: black;
-    height: 80px;
+    background-color: transparent;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,22 +26,12 @@
 }
 
 .navbar a {
-    color: #023e8a; /* Text color */
-    background: #90e0ef;
+    color: #90e0ef; /* Text color */
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 1.2rem;
     transition: all 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #023e8a; /* Background color when hovered *
-    transition: all 0.3s ease;
-}
-
-body {
-    padding-top: 80px; /* Prevent content from hiding under the navbar */
 }
 
 canvas {
@@ -71,4 +61,4 @@ canvas {
   @media (min-width: 601px) {
     /* Styles for tablets and desktops */
   }
-
+  
