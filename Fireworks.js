@@ -9,7 +9,13 @@ let scaleFactor = 1; // Initial scale factor
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    scaleFactor = Math.min(canvas.width, canvas.height) / 800; // Adjust the scale based on canvas size
+    
+    // Adjust scale factor based on both width and height to handle different screen sizes
+    const minDimension = Math.min(canvas.width, canvas.height);
+    scaleFactor = minDimension / 800; // 800 is the original canvas design size for scaling
+
+    // Clear the canvas when resizing
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 window.addEventListener("resize", resizeCanvas, false);
