@@ -3,45 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Gallery</title>
     <link rel="stylesheet" href="Styles4.css" class="style">
 
+
+    
+
 </head>
 <body>
+ 
   <div class="container">
-    <div class="panel active" style="background-image: url('Gallery/IMG_9480.JPG') ;">
-        <h1> Kind</h1>
+
+    <div class="slide">
+
+        <div class="item" style="background-image: url(Gallery/FullSizeRender.JPG);"> 
+          <div class="content">
+            <div class="name">Caring</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_0094.JPG);"> 
+          <div class="content">
+            <div class="name">Independent</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_4927.JPG);"> 
+          <div class="content">
+            <div class="name">Loving</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_5088.JPG);"> 
+          <div class="content">
+            <div class="name">Kind</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_6087.JPG);"> 
+          <div class="content">
+            <div class="name">Wise</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_6152.JPG);"> 
+          <div class="content">
+            <div class="name">Beautiful</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_7904.JPG);"> 
+          <div class="content">
+            <div class="name">Smart</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(Gallery/IMG_0121.JPEG);"> 
+          <div class="content">
+            <div class="name">Friends</div>
+            <div class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
+          </div>
+        </div>
+      
     </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_8553.JPG') ;">
-        <h1> Caring</h1>
+    <div class="button">
+      <button class="prev"> <i class="fa-solid fa-caret-left"></i></button>
+      <button class="next"><i class="fa-solid fa-caret-right"></i> </button>
     </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_7904.JPG') ;">
-        <h1> Smart</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_6152.JPG') ;">
-        <h1> Pretty</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_6087.JPG') ;">
-        <h1> Loving</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_4927.JPG') ;">
-        <h1> Forgiving</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_0094.JPG') ;">
-        <h1> Independent</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/FullSizeRender.JPG') ;">
-        <h1> Cute</h1>
-    </div>
-    <div class="panel active" style="background-image: url('Gallery/IMG_5088.JPG') ;">
-        <h1> Pure</h1>
-    </div>
-  </div>
-  <nav class="navbar">
-    <ul>
-        <li><a href="index.html" class="home-link">Home</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+      <div class="navbar__container">
+          <ul class="navbar__menu">
+              <li class="navbar__item">
+                  <a href="index.html" class="navbar__links">Home</a>
+              </li>
+          </ul>
+      </div>
   <script src="gallery.js"></script>
 </body>
 </html>
